@@ -233,10 +233,13 @@ class MapLocationPicker extends HookWidget {
       extendBodyBehindAppBar: true,
       extendBody: true,
       backgroundColor: config.cardColor,
-      body: Stack(
-        children: [
+      body: SizedBox.expand(
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
           /// Google Map View
-          GoogleMap(
+          Positioned.fill(
+            child: GoogleMap(
             initialCameraPosition: CameraPosition(
               target: position.value,
               zoom: config.initialZoom,
@@ -301,6 +304,7 @@ class MapLocationPicker extends HookWidget {
             groundOverlays: config.groundOverlays,
             heatmaps: config.heatmaps,
           ),
+          ),
 
           /// Search view
           buildSearchView(),
@@ -308,6 +312,7 @@ class MapLocationPicker extends HookWidget {
           /// Floating controls
           buildFloatingControls(),
         ],
+        ),
       ),
     );
   }

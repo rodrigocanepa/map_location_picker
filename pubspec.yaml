@@ -21,8 +21,8 @@ topics:
     - places-autocomplete
 
 environment:
-    sdk: ">=3.1.0 <4.0.0"
-    flutter: ">=3.10.0"
+    sdk: ">=3.6.0 <4.0.0"
+    flutter: ">=3.27.0"
 
 flutter:
     plugin:
@@ -44,8 +44,10 @@ dependencies:
     flutter_hooks: ^0.21.3
     freezed_annotation: ^3.1.0
     google_maps_apis: ^4.0.0
+    retrofit: ">=4.7.3 <4.9.0"
     dio: ^5.9.0
     http: ^1.5.0
+    web: ^1.0.0
 
 dev_dependencies:
     flutter_test:
@@ -53,3 +55,4 @@ dev_dependencies:
     freezed: ^3.2.3
     build_runner: ">=2.5.4 <3.5.0"
     lints: ^6.0.0
+
